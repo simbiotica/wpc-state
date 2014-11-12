@@ -18,7 +18,7 @@ var div = d3.select("#chart").append("div")
     .style("height", height + "px");
 
 
-d3.json("https://wri-01.cartodb.com/api/v2/sql?q=SELECT desig_type as estilo, count(wdpaid) as size FROM protected_areas group by desig_type order by size desc limit 20", function(json) {
+d3.json("https://wri-01.cartodb.com/api/v2/sql?q=SELECT desig_type as estilo, sum(gis_area) as size FROM protected_areas group by desig_type order by size desc limit 20", function(json) {
 	json.children = json.rows;
 	delete json.rows;
   div.data([json]).selectAll("div")
@@ -66,7 +66,7 @@ function cell() {
 
 function loadDataJson(provincia){
 if(provincia=='all'){
-thejson="https://wri-01.cartodb.com/api/v2/sql?q=SELECT desig_type as estilo, count(wdpaid) as size FROM protected_areas group by desig_type order by size desc limit 20";
+thejson="https://wri-01.cartodb.com/api/v2/sql?q=SELECT desig_type as estilo, sum(gis_area) as size FROM protected_areas group by desig_type order by size desc limit 20";
 }else{
 thejson="http://simbiotica.cartodb.com/api/v2/sql?q=SELECT "+provincia+" as estilo, sum(gis_area) as size FROM protected_areas group by "+provincia+" order by size desc limit 20";
 }
