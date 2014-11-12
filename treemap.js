@@ -27,7 +27,7 @@ d3.json("https://wri-01.cartodb.com/api/v2/sql?q=SELECT desig_type as estilo, co
       .attr("class", "cell")
       .style("background", function(d) { return d.estilo ? color(d.estilo) : null; })
       .call(cell)
-      .text(function(d) { return (d.estilo +' ('+ d.size +')') });
+      .text(function(d) { return (d.estilo +' ('+ Math.round(d.size) +')') });
 
   d3.select("#desig_type").on("click", function() {
     loadDataJson("all");
@@ -85,7 +85,7 @@ d3.json(thejson, function(json) {
       .transition()
         .duration(1500)
       .call(cell)
-      .text(function(d) { return (d.estilo +' ('+ d.size +')')  });
+      .text(function(d) { return (d.estilo +' ('+ Math.round(d.size) +')')  });
       
       });
       d3.selectAll("button").classed("active", false);
