@@ -1,6 +1,6 @@
 
-var width = 960,
-    height = 530,
+var width = 1024,
+    height = 430,
     color = d3.scale.category20c();
 
 var treemap = d3.layout.treemap()
@@ -68,8 +68,9 @@ function loadDataJson(provincia){
 if(provincia=='all'){
 thejson="https://wri-01.cartodb.com/api/v2/sql?q=SELECT desig_type as estilo, sum(gis_area) as size FROM protected_areas group by desig_type order by size desc limit 20";
 }else{
-thejson="http://simbiotica.cartodb.com/api/v2/sql?q=SELECT "+provincia+" as estilo, sum(gis_area) as size FROM protected_areas group by "+provincia+" order by size desc limit 20";
+thejson="http://simbiotica.cartodb.com/api/v2/sql?q=(SELECT "+provincia+"::text as estilo, sum(gis_area) as size FROM protected_areas group by "+provincia+" order by size desc limit 30) UNION  SELECT 'Other' as estilo, sum(gis_area) as size FROM protected_areas WHERE "+provincia+" not in (SELECT "+provincia+"  FROM protected_areas group by "+provincia+" order by sum(gis_area) desc limit 30)";
 }
+console.log(thejson);
 d3.json(thejson, function(json) {
 //console.log(json)
 
