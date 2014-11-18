@@ -25,7 +25,7 @@ d3.json("https://wri-01.cartodb.com/api/v2/sql?q=SELECT desig_type as estilo, co
       .data(treemap.nodes)
     .enter().append("div")
       .attr("class", "cell")
-      .style("background", function(d) { return d.estilo ? color(d.estilo) : null; })
+      .style("background", function(d) { return d.estilo ? '#720909' : null; })
       .call(cell)
       .text(function(d) { return (d.estilo +' ('+ d.size +')') });
 
@@ -71,17 +71,26 @@ thejson="https://wri-01.cartodb.com/api/v2/sql?q=SELECT desig_type as estilo, co
 thejson="http://simbiotica.cartodb.com/api/v2/sql?q=SELECT "+provincia+" as estilo, sum(gis_area) as size FROM protected_areas group by "+provincia+" order by size desc limit 20";
 }
 d3.json(thejson, function(json) {
-//console.log(json)
 
+  json.children = json.rows;
+  delete json.rows;
+  div.data([json]).selectAll("div").data(treemap.nodes).exit().remove();  
+  div.data([json]).selectAll("div").data(treemap.nodes).enter().append("div");  
 
-	json.children = json.rows;
-	delete json.rows;
-	div.data([json]).selectAll("div").data(treemap.nodes).exit().remove();	
-	div.data([json]).selectAll("div").data(treemap.nodes).enter().append("div");	
+  var extent = d3.extent(json.children, function(d) {
+    return d.value;
+  });
+
   div.data([json]).selectAll("div")
       .data(treemap.nodes)
       .attr("class", "cell")
-      .style("background", function(d) { return d.estilo ? color(d.estilo) : null; })
+      .style("background", function(d) {
+        return d.estilo ? '#720909' : null;
+      })
+
+      .style('opacity', function(d) {
+        return d.value*100/extent[1] / 100;
+      })
       .transition()
         .duration(1500)
       .call(cell)
