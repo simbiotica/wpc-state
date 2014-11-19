@@ -22,11 +22,13 @@ p {
 }
 
 h2 {
-  float: left;
+  font-family: 'akzidenz-grotesk_bq_light_sRg';
   font-size: 45px;
   margin: 30px 0 0 0;
   font-weight: 100;
-  color: #ABABB2;
+  color: #000;
+  text-align: center;
+  margin-top: 140px;
 }
 
 .cell {
