@@ -1,0 +1,26 @@
+{
+    "rows": [
+        {
+            "estilo": "National",
+            "size": 32552478.9955252
+        },
+        {
+            "estilo": "International",
+            "size": 5783286.76928715
+        },
+        {
+            "estilo": "Regional",
+            "size": 2174166.49697162
+        }
+    ],
+    "time": 5.489,
+    "fields": {
+        "estilo": {
+            "type": "string"
+        },
+        "size": {
+            "type": "number"
+        }
+    },
+    "total_rows": 3
+}
