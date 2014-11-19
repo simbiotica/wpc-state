@@ -3,36 +3,40 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <title>State of the Parks</title>
+    <script type="text/javascript" src="colors.js"></script>
     <script type="text/javascript" src="d3.v2.min.js"></script>
     <!-- CSS -->
-	<link rel="stylesheet" href="../support/css/dnormalizr.css" />
-	<link rel="stylesheet" href="../support/css/orbit.css" />
-	<link rel="stylesheet" href="../support/css/styles.css" />
-    <link type="text/css" rel="stylesheet" href="treemap.css"/>
-    <link type="text/css" rel="stylesheet" href="button.css"/>
+  <link type="text/css" rel="stylesheet" href="treemap.css"/>
+  <link type="text/css" rel="stylesheet" href="button.css"/>
+
     
   </head>
   <body>
   
   <div class="wrap" style="width:960px;">
-  <h2 style="color:white; font-weight:bold">State of the Parks </h2>
 
     <div id="chart">
-      <button id="desig_type" class="first active">
-        Designation Type
-      </button><button id="desig_eng" >
-        Designation 
-      </button><button id="iucn_cat" >
-        IUCN Category
-      </button><button id="iso3" >
-        Country
-      </button><button id="status_yr" >
-        Year
-      </button>
-      <p>
 		
     </div>
-    <p>Distribution based on total area in square km</p>
+    <div class="container">
+      <div id="navigation">
+        <button id="desig_type" class="first active">
+          Designation Type
+        </button><button id="desig_eng" >
+          Designation 
+        </button><button id="iucn_cat" >
+          IUCN Category
+        </button><button id="iso3" >
+          Country
+        </button><button id="status_yr" >
+          Year
+        </button>
+      </div>
+      <p>Distribution based on total area in square km</p>
+    </div>
+    <div class="state">
+      <h2>State of the Parks </h2>
+    </div>
    </div>
     <script type="text/javascript" src="treemap.js"></script>
     <!-- Analytics -->

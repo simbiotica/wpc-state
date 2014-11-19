@@ -1,0 +1,138 @@
+{
+    "rows": [
+        {
+            "estilo": "ECU",
+            "size": 482537.030596614
+        },
+        {
+            "estilo": "CHL",
+            "size": 379961.499534246
+        },
+        {
+            "estilo": "ESP",
+            "size": 311111.079888652
+        },
+        {
+            "estilo": "CHN",
+            "size": 1387864.05784045
+        },
+        {
+            "estilo": "ABNJ",
+            "size": 645222.86579465
+        },
+        {
+            "estilo": "MNG",
+            "size": 293356.208420098
+        },
+        {
+            "estilo": "Other",
+            "size": 8389324.28201168
+        },
+        {
+            "estilo": "SAU",
+            "size": 600397.128205454
+        },
+        {
+            "estilo": "VEN",
+            "size": 510998.595868345
+        },
+        {
+            "estilo": "SGS",
+            "size": 1069897.40454741
+        },
+        {
+            "estilo": "ZAF",
+            "size": 326535.5765207
+        },
+        {
+            "estilo": "BRA",
+            "size": 2731372.83726431
+        },
+        {
+            "estilo": "CAN",
+            "size": 1276193.89405484
+        },
+        {
+            "estilo": "RUS",
+            "size": 2337014.46646015
+        },
+        {
+            "estilo": "NZL",
+            "size": 1392131.4234399
+        },
+        {
+            "estilo": "IOT",
+            "size": 643612.480868359
+        },
+        {
+            "estilo": "PER",
+            "size": 456444.055781865
+        },
+        {
+            "estilo": "KIR",
+            "size": 816516.257923
+        },
+        {
+            "estilo": "IDN",
+            "size": 638415.269700504
+        },
+        {
+            "estilo": "COD",
+            "size": 317149.038035738
+        },
+        {
+            "estilo": "USA",
+            "size": 4202056.52542779
+        },
+        {
+            "estilo": "MAR",
+            "size": 585174.447178291
+        },
+        {
+            "estilo": "COL",
+            "size": 365824.864057551
+        },
+        {
+            "estilo": "AUS",
+            "size": 5225106.66623301
+        },
+        {
+            "estilo": "FRA",
+            "size": 286601.858702386
+        },
+        {
+            "estilo": "NAM",
+            "size": 406424.238454508
+        },
+        {
+            "estilo": "NCL",
+            "size": 1295536.10943951
+        },
+        {
+            "estilo": "TZA",
+            "size": 453365.70257279
+        },
+        {
+            "estilo": "MEX",
+            "size": 437666.161028095
+        },
+        {
+            "estilo": "GRL",
+            "size": 1946826.4935744
+        },
+        {
+            "estilo": "NER",
+            "size": 299293.74235917
+        }
+    ],
+    "time": 0.748,
+    "fields": {
+        "estilo": {
+            "type": "string"
+        },
+        "size": {
+            "type": "number"
+        }
+    },
+    "total_rows": 31
+}

@@ -1,16 +1,12 @@
 
-var width = 960,
-    height = 530,
-    color = d3.scale.category20c();
+var width = 1024,
+    height = 430,
+    color = d3.scale.ordinal().range(colorbrewer.Reds[9]);
 
 var treemap = d3.layout.treemap()
     .size([width, height])
     .sticky(false)
     .value(function(d) { return d.size; });
-    
-    
-    
-
 
 var div = d3.select("#chart").append("div")
     .style("position", "relative")
@@ -18,16 +14,16 @@ var div = d3.select("#chart").append("div")
     .style("height", height + "px");
 
 
-d3.json("https://wri-01.cartodb.com/api/v2/sql?q=SELECT desig_type as estilo, count(wdpaid) as size FROM protected_areas group by desig_type order by size desc limit 20", function(json) {
+d3.json("data/designation_type.json", function(json) {
 	json.children = json.rows;
 	delete json.rows;
   div.data([json]).selectAll("div")
       .data(treemap.nodes)
     .enter().append("div")
       .attr("class", "cell")
-      .style("background", function(d) { return d.estilo ? color(d.estilo) : null; })
+      .style("background", function(d) { return d.estilo ? color(d.size) : null; })
       .call(cell)
-      .text(function(d) { return (d.estilo +' ('+ d.size +')') });
+      .text(function(d) { return (d.estilo +' ('+ Math.round(d.size) +')') });
 
   d3.select("#desig_type").on("click", function() {
     loadDataJson("all");
@@ -65,27 +61,47 @@ function cell() {
 
 
 function loadDataJson(provincia){
-if(provincia=='all'){
-thejson="https://wri-01.cartodb.com/api/v2/sql?q=SELECT desig_type as estilo, count(wdpaid) as size FROM protected_areas group by desig_type order by size desc limit 20";
+if(provincia === 'all'){
+  thejson = "data/designation_type.json";
 }else{
-thejson="http://simbiotica.cartodb.com/api/v2/sql?q=SELECT "+provincia+" as estilo, sum(gis_area) as size FROM protected_areas group by "+provincia+" order by size desc limit 20";
+
+  if (provincia === 'desig_eng') {
+    thejson = 'data/designation.json';
+  }
+
+  if (provincia === 'iucn_cat') {
+    thejson = 'data/iucn_category.json';
+  }
+
+  if (provincia === 'iso3') {
+    thejson = 'data/country.json';
+  }
+
+  if (provincia === 'status_yr') {
+    thejson = 'data/year.json';
+  }
 }
 d3.json(thejson, function(json) {
-//console.log(json)
 
+  json.children = json.rows;
+  delete json.rows;
+  div.data([json]).selectAll("div").data(treemap.nodes).exit().remove();  
+  div.data([json]).selectAll("div").data(treemap.nodes).enter().append("div");  
 
-	json.children = json.rows;
-	delete json.rows;
-	div.data([json]).selectAll("div").data(treemap.nodes).exit().remove();	
-	div.data([json]).selectAll("div").data(treemap.nodes).enter().append("div");	
+  var extent = d3.extent(json.children, function(d) {
+    return d.value;
+  });
+
   div.data([json]).selectAll("div")
       .data(treemap.nodes)
       .attr("class", "cell")
-      .style("background", function(d) { return d.estilo ? color(d.estilo) : null; })
+      .style("background", function(d) {
+        return d.estilo ? color(d.size) : null;
+      })
       .transition()
         .duration(1500)
       .call(cell)
-      .text(function(d) { return (d.estilo +' ('+ d.size +')')  });
+      .text(function(d) { return (d.estilo +' ('+ Math.round(d.size) +')')  });
       
       });
       d3.selectAll("button").classed("active", false);
