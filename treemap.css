@@ -1,10 +1,10 @@
 body {
-  font-family: 'Akzidenz','Helvetica', 'Arial ',sans-serif;
+  font-family: 'akzidenz-grotesk_bqregular','Helvetica', 'Arial ',sans-serif;
 }
 
 .wrap {
   width: 1024px !important;
-  margin: 0 auto;
+  margin: 100px auto 0;
 }
 
 .container {
