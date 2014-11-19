@@ -17,7 +17,7 @@ body {
 
 p { 
   float: right;
-  margin: 7px 6px 0 0; 
+  margin: 11px 6px 0 0; 
   font-size: 13px;
 }
 
@@ -27,25 +27,18 @@ h2 {
   margin: 30px 0 0 0;
   font-weight: 100;
   color: #000;
-  text-align: center;
-  margin-top: 140px;
 }
 
 .cell {
   display: flex;
-  align-items: flex-end;
   position: absolute;
   overflow: hidden;
+  align-items: flex-end;
   background: #fff;
+  font: 10px normal 'akzidenz-grotesk_bqregular';
   color: #fff;
-  font-weight: bold;
+  font-weight: 100;
   line-height: 12px;
-  font-size: 9px;
   text-indent: 4px;
-}
-
-.cell:hover{
-  opacity: 1 !important;
-  transition: all .3s;
 }
 
