@@ -1,0 +1,138 @@
+{
+    "rows": [
+        {
+            "estilo": "Special Protection Area (Birds Directive)",
+            "size": 666737.223413304
+        },
+        {
+            "estilo": "Ramsar Site, Wetland of International Importance",
+            "size": 989948.98612881
+        },
+        {
+            "estilo": "Park",
+            "size": 343277.285816502
+        },
+        {
+            "estilo": "Natural Park",
+            "size": 1349997.67706816
+        },
+        {
+            "estilo": "Federal Threatened/Endangered Species Protected Area",
+            "size": 787141.16496927
+        },
+        {
+            "estilo": "Forest Reserve",
+            "size": 581845.512644904
+        },
+        {
+            "estilo": "National Wildlife Refuge",
+            "size": 404981.474397636
+        },
+        {
+            "estilo": "Protected Area",
+            "size": 627833.166390203
+        },
+        {
+            "estilo": "UNESCO-MAB Biosphere Reserve",
+            "size": 2000582.82005519
+        },
+        {
+            "estilo": "Wildlife Management Area",
+            "size": 670203.43479082
+        },
+        {
+            "estilo": "Indigenous Protected Area",
+            "size": 367493.179875031
+        },
+        {
+            "estilo": "Game Reserve",
+            "size": 343433.228259257
+        },
+        {
+            "estilo": "Wilderness Area",
+            "size": 432142.953843219
+        },
+        {
+            "estilo": "Marine Protected Area",
+            "size": 1994492.7651173
+        },
+        {
+            "estilo": "Indigenous Area",
+            "size": 1135566.29967979
+        },
+        {
+            "estilo": "Marine Protected Area (OSPAR)",
+            "size": 464703.60086705
+        },
+        {
+            "estilo": "Environmental Protection Area",
+            "size": 443931.192948248
+        },
+        {
+            "estilo": "Other",
+            "size": 10429941.7377341
+        },
+        {
+            "estilo": "Nature Reserve",
+            "size": 1708315.63642614
+        },
+        {
+            "estilo": "Commonwealth Marine Reserve",
+            "size": 2838117.54001758
+        },
+        {
+            "estilo": "Marine Park",
+            "size": 657871.544605994
+        },
+        {
+            "estilo": "World Heritage Site",
+            "size": 2792754.96310315
+        },
+        {
+            "estilo": "Zakaznik",
+            "size": 619899.254570657
+        },
+        {
+            "estilo": "Zapovednik",
+            "size": 305602.083275565
+        },
+        {
+            "estilo": "Site of Community Importance (Habitats Directive)",
+            "size": 811597.751412996
+        },
+        {
+            "estilo": "Marine National Monument",
+            "size": 655128.7756507
+        },
+        {
+            "estilo": "National Park",
+            "size": 3621991.3864702
+        },
+        {
+            "estilo": "Benthic Protection Area",
+            "size": 1132745.76910325
+        },
+        {
+            "estilo": "Federal Fishery Management Zone",
+            "size": 557433.714748299
+        },
+        {
+            "estilo": "Permanent Hunting Reserve",
+            "size": 416266.065279395
+        },
+        {
+            "estilo": "Reserve",
+            "size": 357954.073121705
+        }
+    ],
+    "time": 3.777,
+    "fields": {
+        "estilo": {
+            "type": "string"
+        },
+        "size": {
+            "type": "number"
+        }
+    },
+    "total_rows": 31
+}

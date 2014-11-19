@@ -1,0 +1,58 @@
+{
+    "rows": [
+        {
+            "estilo": "Not Reported",
+            "size": 10208284.6486016
+        },
+        {
+            "estilo": "IV",
+            "size": 3350375.14689856
+        },
+        {
+            "estilo": "Ia",
+            "size": 1225759.40304405
+        },
+        {
+            "estilo": "III",
+            "size": 301034.783180218
+        },
+        {
+            "estilo": "VI",
+            "size": 9340372.97810303
+        },
+        {
+            "estilo": "Not Assigned",
+            "size": 14909.2617762883
+        },
+        {
+            "estilo": "V",
+            "size": 2780270.80941059
+        },
+        {
+            "estilo": "Other",
+            "size": null
+        },
+        {
+            "estilo": "II",
+            "size": 6295347.506384
+        },
+        {
+            "estilo": "Ib",
+            "size": 1242264.65633947
+        },
+        {
+            "estilo": "Not Applicable",
+            "size": 5751313.06804658
+        }
+    ],
+    "time": 1.311,
+    "fields": {
+        "estilo": {
+            "type": "string"
+        },
+        "size": {
+            "type": "number"
+        }
+    },
+    "total_rows": 11
+}
